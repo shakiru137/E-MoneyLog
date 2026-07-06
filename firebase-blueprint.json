@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "logs": {
+      "title": "Logs",
+      "description": "Financial cashbook income and expense entries",
+      "properties": {
+        "userId": { "type": "string" },
+        "ledgerType": { "type": "string" },
+        "type": { "type": "string" },
+        "amount": { "type": "number" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "description": { "type": "string" },
+        "receiptUrl": { "type": "string" }
+      },
+      "required": ["userId", "ledgerType", "type", "amount", "category", "date"]
+    },
+    "debts": {
+      "title": "Debts",
+      "description": "Debt and loan records for debtors and creditors",
+      "properties": {
+        "userId": { "type": "string" },
+        "ledgerType": { "type": "string" },
+        "type": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "amount": { "type": "number" },
+        "paidAmount": { "type": "number" },
+        "category": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["userId", "ledgerType", "type", "name", "amount", "status"]
+    },
+    "users": {
+      "title": "Users",
+      "description": "User profile settings and business information",
+      "properties": {
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "businessName": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "state": { "type": "string" }
+      },
+      "required": ["email", "fullName"]
+    }
+  }
+}
